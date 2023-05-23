@@ -1,0 +1,13 @@
+CREATE TABLE users (
+  u_id   NUMBER(10,0)  PRIMARY KEY,
+  u_name VARCHAR2(100) NOT NULL UNIQUE,
+  u_mail VARCHAR2(100) NOT NULL UNIQUE,
+  u_pass VARCHAR2(100) NOT NULL,
+  u_flag CHAR CHECK(u_flag IN ('0', '1', '2')) NOT NULL
+);
+
+CREATE TABLE clean_place(
+  c_place_id    NUMBER(10, 0)  PRIMARY KEY,
+  c_place_name  VARCHAR2(50)   NOT NULL UNIQUE,
+  c_content     VARCHAR2(8168) NOT NULL,
+  c_delete_flag CHAR(1)        NOT NULL CHECK(c_)
